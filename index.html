@@ -1,27 +1,23 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Contatos</title>
+    <title>Formulário de Contato</title>
     <link rel="stylesheet" href="./main.css">
 </head>
 <body>
-
-    <h1>Cadastro de Contatos</h1>
-
     <form id="contactForm">
         <label for="name">Nome:</label>
-        <input type="text" id="name" name="name" required>
+        <input type="text" id="name" required><br><br>
 
         <label for="phone">Telefone:</label>
-        <input type="text" id="phone" name="phone" required>
+        <input type="text" id="phone" placeholder="+351XXXXXXXXX" required pattern="\d+" title="Apenas números são permitidos."><br><br>
 
-        <button type="submit">Cadastrar</button>
+        <button type="submit">Adicionar Contato</button>
     </form>
 
-    <h2>Lista de Contatos</h2>
-    <table id="contactsTable">
+    <table id="contactsTable" border="1">
         <thead>
             <tr>
                 <th>Nome</th>
@@ -29,11 +25,10 @@
             </tr>
         </thead>
         <tbody>
-            <!-- Contatos serão adicionados aqui -->
         </tbody>
     </table>
 
+    <script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./main.js"></script>
-
 </body>
 </html>

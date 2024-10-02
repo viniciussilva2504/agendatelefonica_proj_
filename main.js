@@ -5,6 +5,12 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     const name = document.getElementById('name').value;
     const phone = document.getElementById('phone').value;
 
+    // Validação do telefone
+    if (!/^\d+$/.test(phone)) {
+        alert('Por favor, insira apenas números no campo de telefone.');
+        return; // Interrompe a execução se a validação falhar
+    }
+
     // Criando uma nova linha para a tabela
     const table = document.getElementById('contactsTable').getElementsByTagName('tbody')[0];
     const newRow = table.insertRow();
