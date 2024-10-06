@@ -5,9 +5,9 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     const name = document.getElementById('name').value;
     const phone = document.getElementById('phone').value;
 
-    // Validação do telefone
-    if (!/^\d+$/.test(phone)) {
-        alert('Por favor, insira apenas números no campo de telefone.');
+    // Validação do telefone: exatamente 9 dígitos
+    if (!/^\d{9}$/.test(phone)) {
+        alert('O número de telefone deve conter exatamente 9 dígitos.');
         return; // Interrompe a execução se a validação falhar
     }
 
